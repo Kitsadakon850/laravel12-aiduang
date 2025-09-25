@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title') - เว็บไซต์วิทยาศาสตร์</title>
-    <link rel="stylesheet" href="style.css">
+    <title>@yield('title') - เว็บข่าววิทยาศาสตร์</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <style>
 /* Reset */
@@ -22,12 +22,6 @@ body {
 }
 
 /* Header */
-header {
-    background: #2c3e50;
-    padding: 120px;
-    text-align: center;
-    color: white;
-}
 
 header h1 {
     margin-bottom: 5px;
@@ -47,7 +41,7 @@ nav ul {
 }
 
 nav ul li {
-    background: white;
+    background: rgb(255, 251, 145);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -61,34 +55,27 @@ nav ul li:hover {
 
 nav ul li img {
     width: 100%;
-    height: 250px;
+    height: 150px;
     object-fit: cover;
     display: block;
 }
 
 /* Main */
-main {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+
 
 /* Footer */
 footer {
     text-align: center;
     padding: 15px;
     background: #2c3e50;
-    color: white;
+    color: rgb(243, 247, 200);
     margin-top: 30px;
     font-size: 14px;
 }
 </style>
 <body>
     <header>
-        <h1>เว็บไซต์วิทยาศาสตร์</h1>
+        <h1>เว็บข่าววิทยาศาสตร์</h1>
         <nav>
             <ul>
                 <li><a href="{{ route('food.page1') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/00c8/live/8bf366f0-8165-11f0-a34f-318be3fb0481.jpg.webp" alt=""></a></li>
@@ -101,15 +88,15 @@ footer {
                 <li><a href="{{ route('food.page8') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/59c1/live/662d8810-46aa-11f0-84b6-6bf0f66205f1.jpg.webp" alt=""></a></li>
                 <li><a href="{{ route('food.page9') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/1489/live/49992760-2731-11f0-b26b-ab62c890638b.jpg.webp" alt=""></a></li>
                 <li><a href="{{ route('food.page10') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/779b/live/bd061c20-0fef-11f0-ac9f-c37d6fd89579.jpg.webp" alt=""></a></li>
+           
             </ul>
         </nav>
-        
-    <footer>
-        <p>© 2025 เว็บไซต์วิทยาศาสตร์By wave and game</p>
-    </footer>
     </header>
 
-  
+    <main>
+        @yield('content')
+    </main>
 
+    
 </body>
 </html>

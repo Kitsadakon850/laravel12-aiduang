@@ -117,5 +117,4 @@
       </div>
 
     </section><!-- /Portfolio Details Section -->
-
   </x-active-bootstrap>

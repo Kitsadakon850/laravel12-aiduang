@@ -1,0 +1,34 @@
+name: Deploy to Laravel Server
+
+on:
+  push:
+    branches:
+      - main  # หรือ branch ที่ต้องการ
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy via SSH
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          set -e
+          cd /var/www/jedsada.csbootstrap.com/laravel12-aiduang
+          git stash push -m "ci-deploy-$(date +%F-%T)" || true
+          git fetch origin main
+          git reset --hard origin/main
+          git stash pop || true
+          composer install --no-interaction
+          npm install
+          npm run build
+          php artisan migrate --force
+          php artisan db:seed --force
+# end
