@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>Elon Musk News</title>
+    <title>Science News </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
@@ -23,7 +23,7 @@
         footer {
             margin-top: 50px;
             padding: 20px 0;
-            background: #212529;
+            background: #ffffff;
             color: white;
             text-align: center;
         }
@@ -32,9 +32,9 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gray shadow-sm mb-4">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('news') }}">Elon Musk News</a>
+            <a class="navbar-brand" href="{{ route('news') }}">Science News</a>
         </div>
     </nav>
 
