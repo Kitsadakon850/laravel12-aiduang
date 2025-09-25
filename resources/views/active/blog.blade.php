@@ -1,5 +1,5 @@
 
- <x-active-bootstrap title="Your Page">
+  <x-active-bootstrap class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
@@ -114,5 +114,4 @@
 
     </section><!-- /Blog Pagination Section -->
 
-</x-active-bootstrap>
-
+  </x-active-bootstrap>

@@ -1,5 +1,5 @@
 
-<x-active-bootstrap title="Your Page">
+  <x-active-bootstrap class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
@@ -99,7 +99,7 @@
               <div class="swiper-slide">
                 <div class="team">
                   <div class="pic">
-                    <img src="{{ asset('assets/img/team/team-3.jpg') }}" alt="Image" class="img-fluid">
+                    <img src="{{ asset('assets/img/team/team-3.jpg" alt="Image') }}" class="img-fluid">
                   </div>
                   <h3 clas="">
                     <a href="#"><span class="">Patrik</span> White</a>
@@ -141,5 +141,3 @@
     </section><!-- /Team Section -->
 
   </x-active-bootstrap>
-
- 

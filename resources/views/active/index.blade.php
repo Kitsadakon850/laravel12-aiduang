@@ -1,5 +1,6 @@
 
- <x-active-bootstrap title="Your Page">
+
+  <x-active-bootstrap class="main">
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -233,7 +234,7 @@
 
                 <div class="d-flex author align-items-center">
                   <div class="pic">
-                    <img src="{{ asset('assets/img/team/team-3.jpg') }}" alt="Image" class="img-fluid rounded-circle">
+                    <img src="assets/img/team/team-3.jpg" alt="Image" class="img-fluid rounded-circle">
                   </div>
                   <div class="author-name">
                     <strong class="d-block">Winston Gold</strong>
@@ -246,7 +247,7 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="post-entry" data-aos="fade-up" data-aos-delay="200">
-              <a href="#" class="thumb d-block"><img src="{{ asset('assets/img/img_h_2.jpg') }}" alt="Image" class="img-fluid rounded"></a>
+              <a href="#" class="thumb d-block"><img src="assets/img/img_h_2.jpg" alt="Image" class="img-fluid rounded"></a>
 
               <div class="post-content">
                 <div class="meta">
@@ -261,7 +262,7 @@
 
                 <div class="d-flex author align-items-center">
                   <div class="pic">
-                    <img src="{{ asset('assets/img/team/team-2.jpg') }}" alt="Image" class="img-fluid rounded-circle">
+                    <img src="assets/img/team/team-2.jpg" alt="Image" class="img-fluid rounded-circle">
                   </div>
                   <div class="author-name">
                     <strong class="d-block">Winston Gold</strong>
@@ -274,7 +275,7 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="post-entry" data-aos="fade-up" data-aos-delay="300">
-              <a href="#" class="thumb d-block"><img src="{{ asset('assets/img/img_h_3.jpg') }}" alt="Image" class="img-fluid rounded"></a>
+              <a href="#" class="thumb d-block"><img src="assets/img/img_h_3.jpg" alt="Image" class="img-fluid rounded"></a>
 
               <div class="post-content">
                 <div class="meta">
@@ -289,7 +290,7 @@
 
                 <div class="d-flex author align-items-center">
                   <div class="pic">
-                    <img src="{{ asset('assets/img/team/team-1.jpg') }}" alt="Image" class="img-fluid rounded-circle">
+                    <img src="assets/img/team/team-1.jpg" alt="Image" class="img-fluid rounded-circle">
                   </div>
                   <div class="author-name">
                     <strong class="d-block">Winston Gold</strong>
@@ -400,7 +401,7 @@
               </script>
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="{{ asset('assets/img/img_h_1.jpg') }}" alt="Image" class="img-fluid">
+                  <img src="assets/img/img_h_1.jpg" alt="Image" class="img-fluid">
                   <div class="p-4">
                     <h3 class="text-black h5 mb-3">Modern and clean design</h3>
                     <div class="row">
@@ -429,13 +430,13 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img src="{{ asset('assets/img/img_h_2.jpg') }}" alt="Image" class="img-fluid">
+                  <img src="assets/img/img_h_2.jpg" alt="Image" class="img-fluid">
                 </div>
                 <div class="swiper-slide">
-                  <img src="{{ asset('assets/img/img_h_3.jpg') }}" alt="Image" class="img-fluid">
+                  <img src="assets/img/img_h_3.jpg" alt="Image" class="img-fluid">
                 </div>
                 <div class="swiper-slide">
-                  <img src="{{ asset('assets/img/img_h_4.jpg') }}" alt="Image" class="img-fluid">
+                  <img src="assets/img/img_h_4.jpg" alt="Image" class="img-fluid">
                 </div>
               </div>
             </div>
@@ -703,7 +704,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial mx-auto">
                     <figure class="img-wrap">
-                      <img src="{{ asset('ssets/img/testimonials/testimonials-1.jpg') }}" alt="Image" class="img-fluid">
+                      <img src="assets/img/testimonials/testimonials-1.jpg" alt="Image" class="img-fluid">
                     </figure>
                     <h3 class="name">Adam Aderson</h3>
                     <blockquote>
@@ -718,7 +719,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial mx-auto">
                     <figure class="img-wrap">
-                      <img src="{{ asset('assets/img/testimonials/testimonials-2.jpg') }}" alt="Image" class="img-fluid">
+                      <img src="assets/img/testimonials/testimonials-2.jpg" alt="Image" class="img-fluid">
                     </figure>
                     <h3 class="name">Lukas Devlin</h3>
                     <blockquote>
@@ -733,7 +734,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial mx-auto">
                     <figure class="img-wrap">
-                      <img src="{{ asset('assets/img/testimonials/testimonials-3.jpg') }}" alt="Image" class="img-fluid">
+                      <img src="assets/img/testimonials/testimonials-3.jpg" alt="Image" class="img-fluid">
                     </figure>
                     <h3 class="name">Kayla Bryant</h3>
                     <blockquote>
@@ -753,4 +754,4 @@
       </div>
     </section><!-- /Testimonials Section -->
 
-</x-active-bootstrap>
+  </x-active-bootstrap>

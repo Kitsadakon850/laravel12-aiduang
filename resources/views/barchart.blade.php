@@ -27,7 +27,7 @@
         async function fetchProductData() {
             try {
                 const response = await fetch(
-                '{{ url('api/product') }}'); // Replace with your Laravel API endpoint
+                    "{{ url('api/product') }}"); // Replace with your Laravel API endpoint
                 const products = await response.json();
                 drawChart(products);
             } catch (error) {
@@ -42,7 +42,8 @@
             data.addColumn('number', 'Price');
 
             products.forEach(product => {
-                data.addRow([product.name, product.price]);
+                // data.addRow([product.name, product.price]);
+                data.addRow([product.name, parseFloat(product.price)]);
             });
 
             const options = {

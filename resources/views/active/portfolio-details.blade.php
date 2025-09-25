@@ -1,5 +1,5 @@
 
- <x-active-bootstrap title="Your Page">
+  <x-active-bootstrap class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
@@ -117,4 +117,5 @@
       </div>
 
     </section><!-- /Portfolio Details Section -->
+
   </x-active-bootstrap>

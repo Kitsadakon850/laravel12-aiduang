@@ -1,115 +1,49 @@
 <!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title') - เว็บไซต์วิทยาศาสตร์</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<style>
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => ($appearance ?? 'system') == 'dark'])>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-body {
-    font-family: "Prompt", sans-serif;
-    background: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
+        {{-- Inline script to detect system dark mode preference and apply it immediately --}}
+        <script>
+            (function() {
+                const appearance = '{{ $appearance ?? "system" }}';
 
-/* Header */
-header {
-    background: #2c3e50;
-    padding: 120px;
-    text-align: center;
-    color: white;
-}
+                if (appearance === 'system') {
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-header h1 {
-    margin-bottom: 5px;
-    font-size:60px;
-   
-    text-top: 100%;
+                    if (prefersDark) {
+                        document.documentElement.classList.add('dark');
+                    }
+                }
+            })();
+        </script>
 
-}
+        {{-- Inline style to set the HTML background color based on our theme in app.css --}}
+        <style>
+            html {
+                background-color: oklch(1 0 0);
+            }
 
-/* เมนูอาหาร */
-nav ul {
-    display: grid;
-  grid-template-columns: repeat(5, 5fr);
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-}
+            html.dark {
+                background-color: oklch(0.145 0 0);
+            }
+        </style>
 
-nav ul li {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+        <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-nav ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
+        <link rel="icon" href="/favicon.ico" sizes="any">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-nav ul li img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
-/* Main */
-main {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #2c3e50;
-    color: white;
-    margin-top: 30px;
-    font-size: 14px;
-}
-</style>
-<body>
-    <header>
-        <h1>เว็บไซต์วิทยาศาสตร์</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ route('food.page1') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/00c8/live/8bf366f0-8165-11f0-a34f-318be3fb0481.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page2') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/fb62/live/7cd5fa90-79f2-11f0-87a7-fdfee4a863a8.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page3') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/5f03/live/2ae2c100-7beb-11f0-83cc-c5da98c419b8.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page4') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/ac71/live/8273fad0-7450-11f0-8071-1788c7e8ae0e.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page5') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/99ff/live/b5dcb7e0-710d-11f0-af20-030418be2ca5.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page6') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/cd42/live/e4c9e0f0-591b-11f0-960d-e9f1088a89fe.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page7') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/b44e/live/6d3965d0-460e-11f0-8402-c958f7234d20.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page8') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/59c1/live/662d8810-46aa-11f0-84b6-6bf0f66205f1.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page9') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/1489/live/49992760-2731-11f0-b26b-ab62c890638b.jpg.webp" alt=""></a></li>
-                <li><a href="{{ route('food.page10') }}"><img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/779b/live/bd061c20-0fef-11f0-ac9f-c37d6fd89579.jpg.webp" alt=""></a></li>
-            </ul>
-        </nav>
-        
-    <footer>
-        <p>© 2025 เว็บไซต์วิทยาศาสตร์By wave and game</p>
-    </footer>
-    </header>
-
-  
-
-</body>
+        @viteReactRefresh
+        @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
+        @inertiaHead
+    </head>
+    <body class="font-sans antialiased">
+        @inertia
+    </body>
 </html>

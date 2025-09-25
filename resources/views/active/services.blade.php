@@ -1,4 +1,5 @@
-<x-active-bootstrap title="Your Page">
+
+  <x-active-bootstrap class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
@@ -135,4 +136,4 @@
       </div>
     </section><!-- /Services Section -->
 
- </x-active-bootstrap>
+  </x-active-bootstrap>

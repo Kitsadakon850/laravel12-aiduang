@@ -1,5 +1,5 @@
 
-<x-active-bootstrap title="Your Page">
+  <x-active-bootstrap class="main">
 
     <!-- Page Title -->
     <div class="page-title light-background">
@@ -7,7 +7,7 @@
         <h1>About</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="current">About</li>
           </ol>
         </nav>
@@ -371,4 +371,5 @@
       </div>
     </section><!-- /Testimonials Section -->
 
-</x-active-bootstrap>
+  </x-active-bootstrap>
+

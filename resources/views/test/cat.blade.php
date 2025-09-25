@@ -1,9 +1,10 @@
 <html>
 
 <body>
-  <h1>gallery of kitsadakon 67122420038</h1>
-    cat<a href="gallery/cat"> <img src="{{$cat}}" alt=""width=20%></a>
-   
+    <h1>Gallery of Jedsada 67122420032</h1>
+    <h2>Cat ,<img src="{{ $cat }}" style="width: 200;"></h2> </br>
+
+
 </body>
 
 </html>

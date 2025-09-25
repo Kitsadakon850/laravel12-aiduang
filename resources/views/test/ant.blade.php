@@ -1,10 +1,10 @@
-
 <html>
 
 <body>
-    <h1>gallery of kitsadakon 67122420038</h1>
-   ant <a href="gallery/ant"> <img src="{{$ant}}" alt=""width=20%></a>
-    
+    <h1>Gallery of Jedsada 67122420032</h1>
+    <h2>Ant ,<img src="{{ $ant }}" style="width: 200;"></h2> </br>
+
+
 </body>
 
 </html>
